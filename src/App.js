@@ -32,6 +32,14 @@ function App() {
         <Route path="/detectByFolder" element={<DetectFaceByFolder />} />
       </Routes>
       </BrowserRouter>
+      <FixedPlugin
+        hasImage={hasImage}
+        setHasImage={() => setHasImage(!hasImage)}
+        color={color}
+        setColor={(color) => setColor(color)}
+        image={image}
+        setImage={(image) => setImage(image)}
+      />
    </>
   );
 }
