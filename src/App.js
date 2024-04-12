@@ -1,19 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import Theme1 from './Theme1/Theme1';
-import Theme2 from './Theme2/Theme2';
-import Home from './Home';
-import { BrowserRouter } from 'react-router-dom';
-import Register from "./Components/Register"
-import Login from "./Components/Login"
- import Navbar  from "./Components/NavBar"
-import { Routes, Route } from "react-router-dom";
-import DetectByCamera from './Face-Detaction/DetectByCamera';
-import DetectFaceByFolder from './Face-Detaction/DetectFaceByFolder';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
+import Navbar from "./Components/NavBar";
+import Theme1 from "./Theme1/Theme1";
+import Theme2 from "./Theme2/Theme2";
+import Home from "./Home";
+import "./App.css"
+import DetectByCamera from "./Face-Detaction/DetectByCamera";
+import DetectFaceByFolder from "./Face-Detaction/DetectFaceByFolder";
+import FixedPlugin from "./Components/FixedPlugin";
+import sidebarImage from "./Images/sidebar-5.jpg";
 
 function App() {
+  const [hasImage, setHasImage] = useState(true);
+  const [image, setImage] = useState(sidebarImage);
+  const [color, setColor] = useState("White");
+
   return (
-   <>   
+   <>
+   
 <BrowserRouter>
     <Routes>
         <Route path="/register" element={<Register />} />
@@ -21,15 +27,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/theme1" element={<Theme1 />} />
         <Route path="/theme2" element={<Theme2 />} />
-        <Route path="*" element={<Theme1 />} />
+        <Route path="*" element={<Home />} />
         <Route path="/detectByCamera" element={<DetectByCamera />} />
         <Route path="/detectByFolder" element={<DetectFaceByFolder />} />
       </Routes>
       </BrowserRouter>
-      <div className='containers1'>
-
-      <h3 className='chatbot-icon'>hello</h3>
-      </div>
    </>
   );
 }

@@ -1,25 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import themeImage from './../Images/ThemeBackgroundImage.jpg';
 import NavbarTheme1 from './NavbarTheme1';
 import { useNavigate } from "react-router-dom";
 
+
+
 const Theme1 = () => {
-  //  const navigate = useNavigate();
-  // useEffect(()=>{
-  //   if(!localStorage.getItem("IsloggedIn"))
-  // {
-  //   navigate("/login");
-  //   return;
-  // }
-  // },[])
+   const navigate = useNavigate();
+  useEffect(()=>{
+    if(!localStorage.getItem("IsloggedIn"))
+  {
+    navigate("/login");
+    return;
+  }
+  },[])
   return (
- <>
-<>
-  {/* ======= Header ======= */}
+
+<> 
 <NavbarTheme1/>
-  {/* End Header */}
   <main id="main">
-    {/* Hero Section - Home Page */}
     <section id="hero" className="hero">
       <img src={themeImage}/>
       {/* <img src="assets/img/hero-bg.jpg" alt=""/> */} 
@@ -32,6 +31,10 @@ const Theme1 = () => {
             <p data-aos="fade-up" data-aos-delay={200}>
               We are team of talented designers making websites with CS
             </p>
+
+         
+
+
           </div>
           <div className="col-lg-5">
             <form
@@ -50,10 +53,15 @@ const Theme1 = () => {
                 className="btn btn-primary"
                 defaultValue="Sign up"
               />
+         
             </form>
+           
           </div>
+         
         </div>
+        
       </div>
+      
     </section>
     {/* End Hero Section */}
     {/* Clients Section - Home Page */}
@@ -1804,7 +1812,7 @@ const Theme1 = () => {
   {/* End Footer */}
 </>
 
- </>
+
   )
 }
 
