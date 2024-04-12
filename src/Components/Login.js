@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import NavbarTheme1 from "../Theme1/NavbarTheme1";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ const Login = () => {
           var data = result.data.name;
           localStorage.setItem("name", data);
           localStorage.setItem("IsloggedIn", true);
-          window.location.href = "/home";
+          window.location.href = "/theme1";
         }
       });
     }
@@ -31,7 +32,7 @@ const Login = () => {
   };
   return (
     <>
-    <NavBar/>
+    <NavbarTheme1/>
       <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -54,7 +55,7 @@ const Login = () => {
                             className="fas fa-cubes fa-2x me-3"
                             style={{ color: "#ff6219" }}
                           />
-                          <span className="h1 fw-bold mb-0">Logo</span>
+                          {/* <span className="h1 fw-bold mb-0">Logo</span> */}
                         </div>
                         <h5
                           className="fw-normal mb-3 pb-3"
@@ -127,7 +128,7 @@ const Login = () => {
           </div>
         </div>
       </section>
-      x
+     
     </>
   );
 };

@@ -37,3 +37,21 @@
     transform: rotate(360deg);
   }
 }
+
+.containers1 {
+  position: fixed;
+  bottom: 100px;
+  right: 60px;
+  cursor: pointer;
+}
+
+.chatbot-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  transition: background 0.3s;
+  position: fixed;
+  bottom: 450px;
+  right: 10px;
+  cursor: pointer;
+}

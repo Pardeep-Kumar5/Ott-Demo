@@ -4,14 +4,14 @@ import NavbarTheme1 from './NavbarTheme1';
 import { useNavigate } from "react-router-dom";
 
 const Theme1 = () => {
-   const navigate = useNavigate();
-  useEffect(()=>{
-    if(!localStorage.getItem("IsloggedIn"))
-  {
-    navigate("/login");
-    return;
-  }
-  },[])
+  //  const navigate = useNavigate();
+  // useEffect(()=>{
+  //   if(!localStorage.getItem("IsloggedIn"))
+  // {
+  //   navigate("/login");
+  //   return;
+  // }
+  // },[])
   return (
  <>
 <>
@@ -30,7 +30,7 @@ const Theme1 = () => {
               Welcome to Our Website
             </h2>
             <p data-aos="fade-up" data-aos-delay={200}>
-              We are team of talented designers making websites with Bootstrap
+              We are team of talented designers making websites with CS
             </p>
           </div>
           <div className="col-lg-5">

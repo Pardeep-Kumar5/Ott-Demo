@@ -13,8 +13,7 @@ import DetectFaceByFolder from './Face-Detaction/DetectFaceByFolder';
 
 function App() {
   return (
-   <>
-   
+   <>   
 <BrowserRouter>
     <Routes>
         <Route path="/register" element={<Register />} />
@@ -22,11 +21,15 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/theme1" element={<Theme1 />} />
         <Route path="/theme2" element={<Theme2 />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Theme1 />} />
         <Route path="/detectByCamera" element={<DetectByCamera />} />
         <Route path="/detectByFolder" element={<DetectFaceByFolder />} />
       </Routes>
       </BrowserRouter>
+      <div className='containers1'>
+
+      <h3 className='chatbot-icon'>hello</h3>
+      </div>
    </>
   );
 }

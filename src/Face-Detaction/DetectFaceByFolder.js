@@ -16,10 +16,10 @@ const DetectFaceByFolder = () => {
   const [loading1, setLoading1] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
-    if (!localStorage.getItem("IsloggedIn")) {
-      navigate("/login");
-      return;
-    }
+    // if (!localStorage.getItem("IsloggedIn")) {
+    //   navigate("/login");
+    //   return;
+    // }
     getAllImages();
     loadModels();
   }, []);
@@ -171,7 +171,8 @@ const DetectFaceByFolder = () => {
     //   position: relative;
     // }
     <div className="face">
-      {localStorage.getItem("Theme") == 1 ? <NavbarTheme1 /> : <NavbarTheme2 />}
+      {/* {localStorage.getItem("Theme") == 1 ? <NavbarTheme1 /> : <NavbarTheme2 />} */}
+      <NavbarTheme1/>
       <div style={{ paddingTop: "100px" }}>
         <h3>Unique Faces:</h3>
         <div className="face-container text-center">
